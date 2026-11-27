@@ -3,6 +3,18 @@ package se.magnus.util.http;
 import java.time.ZonedDateTime;
 import org.springframework.http.HttpStatus;
 
+
+@JsonCreator
+public HttpErrorInfo(
+        @JsonProperty("timestamp") ZonedDateTime timestamp,
+        @JsonProperty("status") int status,
+        @JsonProperty("path") String path,
+        @JsonProperty("message") String message) {
+  this.timestamp = timestamp;
+  this.httpStatus = HttpStatus.valueOf(status);
+  this.path = path;
+  this.message = message;
+}
 public class HttpErrorInfo {
   private final ZonedDateTime timestamp;
   private final String path;
