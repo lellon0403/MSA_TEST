@@ -11,12 +11,13 @@ java {
         languageVersion = JavaLanguageVersion.of(21)
     }
 }
+
 repositories {
     mavenCentral()
 }
 
 ext {
-    springBootVersion = '3.5.0'
+    springBootVersion = '4.0.8'
 }
 
 dependencies {
