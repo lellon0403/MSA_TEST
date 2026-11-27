@@ -1,21 +1,13 @@
 package se.magnus.api.core.recommendation;
 
-@JsonCreator
-public Recommendation(
-        @JsonProperty("productId") int productId,
-        @JsonProperty("recommendationId") int recommendationId,
-        @JsonProperty("author") String author,
-        @JsonProperty("rate") int rate,
-        @JsonProperty("content") String content,
-        @JsonProperty("serviceAddress") String serviceAddress) {
+public class Recommendation {
+  private int productId;
+  private int recommendationId;
+  private  String author;
+  private int rate;
+  private  String content;
+  private  String serviceAddress;
 
-  this.productId = productId;
-  this.recommendationId = recommendationId;
-  this.author = author;
-  this.rate = rate;
-  this.content = content;
-  this.serviceAddress = serviceAddress;
-}
   public Recommendation() {
     productId = 0;
     recommendationId = 0;

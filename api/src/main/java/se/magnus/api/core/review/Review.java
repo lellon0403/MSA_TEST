@@ -1,21 +1,13 @@
 package se.magnus.api.core.review;
 
-@JsonCreator
-public Review(
-        @JsonProperty("productId") int productId,
-        @JsonProperty("reviewId") int reviewId,
-        @JsonProperty("author") String author,
-        @JsonProperty("subject") String subject,
-        @JsonProperty("content") String content,
-        @JsonProperty("serviceAddress") String serviceAddress) {
+public class Review {
+  private int productId;
+  private int reviewId;
+  private  String author;
+  private String subject;
+  private  String content;
+  private  String serviceAddress;
 
-  this.productId = productId;
-  this.reviewId = reviewId;
-  this.author = author;
-  this.subject = subject;
-  this.content = content;
-  this.serviceAddress = serviceAddress;
-}
   public Review() {
     productId = 0;
     reviewId = 0;

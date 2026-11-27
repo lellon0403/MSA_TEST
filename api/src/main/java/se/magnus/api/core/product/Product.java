@@ -1,16 +1,11 @@
 package se.magnus.api.core.product;
 
-@JsonCreator
-public Product(
-        @JsonProperty("productId") int productId,
-        @JsonProperty("name") String name,
-        @JsonProperty("weight") int weight,
-        @JsonProperty("serviceAddress") String serviceAddress) {
-  this.productId = productId;
-  this.name = name;
-  this.weight = weight;
-  this.serviceAddress = serviceAddress;
-}
+public class Product {
+  private int productId;
+  private String name;
+  private  int weight;
+  private String serviceAddress;
+
   public Product() {
     productId = 0;
     name = null;
