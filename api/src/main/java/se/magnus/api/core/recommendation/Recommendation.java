@@ -1,12 +1,15 @@
 package se.magnus.api.core.recommendation;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Recommendation {
   private int productId;
   private int recommendationId;
-  private  String author;
+  private String author;
   private int rate;
-  private  String content;
-  private  String serviceAddress;
+  private String content;
+  private String serviceAddress;
 
   public Recommendation() {
     productId = 0;
@@ -17,13 +20,14 @@ public class Recommendation {
     serviceAddress = null;
   }
 
+  @JsonCreator
   public Recommendation(
-    int productId,
-    int recommendationId,
-    String author,
-    int rate,
-    String content,
-    String serviceAddress) {
+          @JsonProperty("productId") int productId,
+          @JsonProperty("recommendationId") int recommendationId,
+          @JsonProperty("author") String author,
+          @JsonProperty("rate") int rate,
+          @JsonProperty("content") String content,
+          @JsonProperty("serviceAddress") String serviceAddress) {
 
     this.productId = productId;
     this.recommendationId = recommendationId;
@@ -55,5 +59,29 @@ public class Recommendation {
 
   public String getServiceAddress() {
     return serviceAddress;
+  }
+
+  public void setProductId(int productId) {
+    this.productId = productId;
+  }
+
+  public void setRecommendationId(int recommendationId) {
+    this.recommendationId = recommendationId;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
+  }
+
+  public void setRate(int rate) {
+    this.rate = rate;
+  }
+
+  public void setContent(String content) {
+    this.content = content;
+  }
+
+  public void setServiceAddress(String serviceAddress) {
+    this.serviceAddress = serviceAddress;
   }
 }
