@@ -1,9 +1,10 @@
 package se.magnus.microservices.core.review;
-
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@ComponentScan("se.magnus")
 public class ReviewServiceApplication {
 
 	public static void main(String[] args) {
